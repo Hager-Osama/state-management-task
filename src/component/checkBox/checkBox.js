@@ -5,20 +5,14 @@ const CheckBoxComponent = () => {
   const [textFieldValue, setTextFieldValue] = useState(''); // Store the text field value
 
   const handleCheckBoxChange = (event) => {
-  const updatedSelectedOptions = [...selectedOptions]; // Create a copy of the selected options array
+  let updatedSelectedOptions = [...selectedOptions]; // Create a copy of the selected options array
 
     if (event.target.checked) { // If the checkbox is checked
       updatedSelectedOptions.push(event.target.value); // Add the checkbox value to the array
     }
    /* if (!event.target.checked) { // If the checkbox is unchecked
-      updatedSelectedOptions.pop((option) => option !== event.target.value); // Remove the checkbox value using filter()
+      updatedSelectedOptions=updatedSelectedOptions.filter((option) => option !== event.target.value); // Remove the checkbox value using filter()
     }*/
-    
-    
-    else { // If the checkbox is unchecked
-      const index = updatedSelectedOptions.indexOf(event.target.value); // Find the index of the checkbox value in the array
-      updatedSelectedOptions.splice(index, 1); // Remove the checkbox value from the array
-    }
 
     setSelectedOptions(updatedSelectedOptions); // Update the selected options state
 
