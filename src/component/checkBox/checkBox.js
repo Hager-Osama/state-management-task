@@ -10,9 +10,9 @@ const CheckBoxComponent = () => {
     if (event.target.checked) { // If the checkbox is checked
       updatedSelectedOptions.push(event.target.value); // Add the checkbox value to the array
     }
-   /* if (!event.target.checked) { // If the checkbox is unchecked
+    else(!event.target.checked) { // If the checkbox is unchecked
       updatedSelectedOptions=updatedSelectedOptions.filter((option) => option !== event.target.value); // Remove the checkbox value using filter()
-    }*/
+  
 
     setSelectedOptions(updatedSelectedOptions); // Update the selected options state
 
